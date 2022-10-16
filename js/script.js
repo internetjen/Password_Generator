@@ -2,6 +2,7 @@
 // Targets #generate id, red "Generate" button
 var generateBtn = document.querySelector("#generate");
 
+//Function that returns random integer
 function randomInt(min, max){
   if (!max) {
     max = min
@@ -11,10 +12,12 @@ function randomInt(min, max){
   return Math.floor(min*(1 - rand) + rand*max)
 }
 
+//Function that returns random item from array corresponding to random integer
 function getRandomItem(list) {
-  return list[randomInt(0, list.length - 1)]
+  return list[randomInt(list.length)]
 } 
-// Function that is generating random password 
+
+// Function that is generating random password according to requirements
 function generatePassword () {
 
   var userInput = window.prompt("Password length?")
@@ -38,7 +41,7 @@ function generatePassword () {
   var numberList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
   var lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i","j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   var uppercaseList = ["A", "B", "C", "D", "E", "F", "G", "H", "I","J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-  var symbolsList = ["!", "#", "$", "&", "!", "@", "*", "%"]
+  var symbolsList = ["!", "#", "$", "&", "!", "@", "*", "%", "^"]
 
   var optionsCart = []
 
@@ -60,6 +63,8 @@ function generatePassword () {
   }
 
   var generatedPassword = ""
+  
+//For loop that displays gernerated password in one line
 
   for (var i = 0; i < passwordLength; i++) {
     var randomList = getRandomItem(optionsCart)
@@ -78,7 +83,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password; 
-
 }
 
 // Add event listener to generate button
