@@ -9,8 +9,8 @@ The following image shows the web application's appearance and functionality:
 ![Password Generator image](Assets/03-javascript-homework-demo.png)
 
 ## Links
-https://github.com/internetjen/Password_Generator
-https://internetjen.github.io/Password_Generator/
+Github repo: https://github.com/internetjen/Password_Generator  
+Deployed link: https://internetjen.github.io/Password_Generator/
 
 ## License
 N/A
